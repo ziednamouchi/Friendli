@@ -1,0 +1,6 @@
+Atteint:1 http://fr.archive.ubuntu.com/ubuntu xenial InRelease
+Atteint:2 http://fr.archive.ubuntu.com/ubuntu xenial-updates InRelease
+Atteint:3 http://fr.archive.ubuntu.com/ubuntu xenial-backports InRelease
+Atteint:4 http://ppa.launchpad.net/webupd8team/sublime-text-3/ubuntu xenial InRelease
+Atteint:5 http://security.ubuntu.com/ubuntu xenial-security InRelease
+Lecture des listes de paquets…
