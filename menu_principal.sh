@@ -35,17 +35,17 @@ echo -e "\n"
 # Main logic - infinite loop
 # ------------------------------------
 
-./wallpaper
+sh scripts/wallpaper.sh
 show_first_menu
 read -p "FriendLi/menu>" choice
 case $choice in
-		1) clear; sh scripts/system_menu ;;
-		2) clear; sh scripts/users_menu ;;
-		3) clear; sh scripts/files_menu ;;
-		4) clear; sh scripts/firewall_menu ;;
-		5) clear; sh scripts/cron_menu ;;
-		6) clear; sh scripts/menu_update ;;
- 		7) clear; sh scripts/sc_exit ;;
+		1) clear; sh scripts/system_menu.sh ;;
+		2) clear; sh scripts/users_menu.sh ;;
+		3) clear; sh scripts/files_menu.sh ;;
+		4) clear; sh scripts/firewall_menu.sh ;;
+		5) clear; sh scripts/cron_menu.sh ;;
+		6) clear; sh scripts/menu_update.sh ;;
+ 		7) clear; sh scripts/sc_exit.sh ;;
 		8) clear
 		   read_me 
 		   show_first_menu
