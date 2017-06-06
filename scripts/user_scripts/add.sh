@@ -1,17 +1,18 @@
-read -p " Username please: " username
-
-user=`cat /etc/passwd | grep -i $username | cut -d: -f1`
-
-if [ "$user" = "$username" ]; then
- read -p " Username already exists please choose another one: " username
+#!/bin/bash
+# Script to add a user to Linux system
+if [ $(id -u) -eq 0 ]; then
+    read -p "Enter username : " username
+    read -s -p "Enter password : " password
+    egrep "^$username" /etc/passwd >/dev/null
+    if [ $? -eq 0 ]; then
+        echo "$username exists!"
+        exit 1
+    else
+        pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
+        useradd -m -p $pass $username
+        [ $? -eq 0 ] && echo "User has been added to system!" || echo "Failed to add a user!"
+    fi
 else
- useradd -m $username 2>/dev/null
- passwd
- if [ passwd ]; then
-  echo " Reenter the password: "
-  passwd
- else
-  echo " paswword successfully set"
- fi
+    echo "Only root may add a user to the system"
+    exit 2
 fi
-
