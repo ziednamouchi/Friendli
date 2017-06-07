@@ -1,3 +1,4 @@
+#!/bin/bash
 choice="y"
 while $choice="y"
 do
@@ -11,3 +12,4 @@ echo " [-] The file doesn't exist!"
 read -p "Do you want to remove another file?[n/y]: " choice
 fi
 done
+sh ../files_menu.sh
