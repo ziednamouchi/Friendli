@@ -34,11 +34,12 @@ do
 	read -p "Please enter (y) for yes or (n) for no: " choice
 done
 if [ $choice = "n" ];then
-	break
-	clear; sh scripts/users_menu.sh ;;
+	break 
 elif [ $choice = "y" ]; then
 	continue
 	
 fi
 	
 done
+
+clear; sh scripts/files_menu.sh
