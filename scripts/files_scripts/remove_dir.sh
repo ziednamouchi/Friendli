@@ -75,4 +75,4 @@ fi
 done
 
 clear; sh scripts/files_menu.sh 
-clear; sh scripts/files_menu.sh 
+ 
