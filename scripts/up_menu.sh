@@ -18,21 +18,45 @@ show_menu(){
 
 up_date(){
 
-	sudo apt-get update && echo "[+] Update successfully done" || echo "[!] Unable to update "
-	pause
+	if [ -n "$(command -v apt-get)" ];then
+
+		sudo apt-get update && echo "[+] Update successfully done" || echo "[!] Unable to update "
+		pause
+
+	elif [ -n "$(command -v yum)" ];then 
+
+		su -c 'yum upgrade' && echo "[+] Upgrade successfully done" || echo "[!] Unable to upgrade "
+		pause
+	
+	fi
 	
 }
 
 up_grade(){
 
-	sudo apt-get upgrade && echo "[+] Upgrade successfully done" || echo "[!] Unable to upgrade "
-	pause
+	if [ -n "$(command -v apt-get)" ];then 
+		sudo apt-get upgrade && echo "[+] Upgrade successfully done" || echo "[!] Unable to upgrade "
+		pause
+	elif [ -n "$(command -v yum)" ];then 
+		su -c 'yum upgrade' && echo "[+] Upgrade successfully done" || echo "[!] Unable to upgrade "
+		pause
+
+	fi
 }
 
 dist_up(){
 
-	sudo apt-get dist-upgrade && echo "[+] Dist-upgrade successfully done" || echo "[!] Unable to perform dist-upgrade "
-	pause
+	if [ -n "$(command -v apt-get)" ];then
+
+		sudo apt-get dist-upgrade && echo "[+] Dist-upgrade successfully done" || echo "[!] Unable to perform dist-upgrade "
+		pause
+
+	elif [ -n "$(command -v yum)" ];then 
+
+		echo "[!] You need to read more about redhat distros !!! "
+		pause
+
+	fi
 }
 
 read_input(){
