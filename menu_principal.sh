@@ -7,10 +7,10 @@ echo "1)System"
 echo "2)Managing users"
 echo "3)Managing files and directories"
 echo "4)Configuring firewall"
-echo "5)Planning system tasks"
-echo "6)System update and upgrade"
-echo "7)exit"
-echo "8)readme"
+echo "5)System update and upgrade"
+echo "6)exit"
+echo "7)readme"
+
 }
 
 
@@ -43,10 +43,9 @@ case $choice in
 		2) clear; source scripts/users_menu.sh ;;
 		3) clear; source scripts/files_menu.sh ;;
 		4) clear; source scripts/firewall_menu.sh ;;
-		5) clear; source scripts/cron_menu.sh ;;
-		6) clear; source scripts/menu_update.sh ;;
- 		7) clear; source scripts/sc_exit.sh ;;
-		8) clear
+		5) clear; source scripts/up_menu.sh ;;
+ 		6) clear; source scripts/sc_exit.sh ;;
+		7) clear
 		   read_me 
 		   show_first_menu
 		   read -p "FriendLi/menu>" choice;;
