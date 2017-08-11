@@ -1,4 +1,4 @@
-
+#!/bin/bash
 # ----------------------------------------------
 #  The First menu function
 # ----------------------------------------------
@@ -39,13 +39,13 @@ sh scripts/wallpaper.sh
 show_first_menu
 read -p "FriendLi/menu>" choice
 case $choice in
-		1) clear; sh scripts/system_menu.sh ;;
-		2) clear; sh scripts/users_menu.sh ;;
-		3) clear; sh scripts/files_menu.sh ;;
-		4) clear; sh scripts/firewall_menu.sh ;;
-		5) clear; sh scripts/cron_menu.sh ;;
-		6) clear; sh scripts/menu_update.sh ;;
- 		7) clear; sh scripts/sc_exit.sh ;;
+		1) clear; source scripts/sys_info.sh ;;
+		2) clear; source scripts/users_menu.sh ;;
+		3) clear; source scripts/files_menu.sh ;;
+		4) clear; source scripts/firewall_menu.sh ;;
+		5) clear; source scripts/cron_menu.sh ;;
+		6) clear; source scripts/menu_update.sh ;;
+ 		7) clear; source scripts/sc_exit.sh ;;
 		8) clear
 		   read_me 
 		   show_first_menu

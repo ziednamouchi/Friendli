@@ -52,4 +52,4 @@ do
 	
 done
 
-clear; sh scripts/files_menu.sh
+clear; source scripts/files_menu.sh

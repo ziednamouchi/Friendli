@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "1) system update"
 echo "2) system upgrade"
 echo "3) system dist-upgrade"
@@ -66,6 +67,6 @@ case $choice in
 	fi 
 	rm dist.out;;
 
-4) echo " retour au menu pincipal";;
-5) sh sc_exit;;
+4) source menu_principal.sh;;
+5) source sc_exit;;
 esac

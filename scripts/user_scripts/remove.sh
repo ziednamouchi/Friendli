@@ -1,3 +1,4 @@
+#!/bin/bash
 verif(){
 	user=`cat /etc/passwd | grep -i $username | cut -d: -f1`
 
